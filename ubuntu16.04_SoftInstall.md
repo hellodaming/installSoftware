@@ -111,7 +111,16 @@ ok！
  at 2016/09/19
 
 ### vim C++ 各种折腾还是失败了……
-https://github.com/VundleVim/Vundle.vim/blob/master/README_ZH_CN.md
+~~https://github.com/VundleVim/Vundle.vim/blob/master/README_ZH_CN.md~~
 
-http://howiefh.github.io/2015/05/22/vim-install-youcompleteme-plugin/
-sudo apt-get install build-essential cmake
+~~http://howiefh.github.io/2015/05/22/vim-install-youcompleteme-plugin/
+sudo apt-get install build-essential cmake~~
+
+### 有道词典
+英文差，词汇量少，经常要查字典，所以安装个有道词典
+
+去有道官网下载了相关deb包，一开始没有留意有ubuntu版本，下了deepin的版本（ youdao-dict_1.1.0-0-deepin_amd64.deb）
+
+用dpkg安装该包。
+![file-list](/ubuntu16.04_SoftInstall/youdao-dict_dpkg.png)
+![file-list](/ubuntu16.04_SoftInstall/youdao-dict_ok.png)
