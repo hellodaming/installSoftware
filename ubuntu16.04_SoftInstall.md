@@ -190,3 +190,8 @@ aria2c --conf-path=/XXX/aria2.conf
 去https://github.com/ziahamza/webui-aria2
 ，把它clone到本地，然后打开目录下的index.html，就能显示相关下载信息了
 ![file-list](/ubuntu16.04_SoftInstall/aria2_download2.png)
+
+参考资料：http://www.jianshu.com/p/d7e01982e474
+参考资料：http://www.cnblogs.com/zz0412/p/3416683.html
+参考资料：https://github.com/acgotaku/BaiduExporter
+参考资料：http://moflying.com/2016/06/05/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8aria2%E5%8F%8Awebui-aria2%E4%B8%8B%E8%BD%BD%E7%99%BE%E5%BA%A6%E4%BA%91%E8%B5%84%E6%BA%90/
