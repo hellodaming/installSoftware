@@ -116,6 +116,9 @@ ok！
 ~~http://howiefh.github.io/2015/05/22/vim-install-youcompleteme-plugin/
 sudo apt-get install build-essential cmake~~
 
+
+20160923号的时候，重新安装一下就好了（关键是要在网络好的情况下安装YouCompleteMe，这个插件的确有点大，下载速度又太慢了）
+
 ### 有道词典
 英文差，词汇量少，经常要查字典，所以安装个有道词典
 
@@ -123,4 +126,67 @@ sudo apt-get install build-essential cmake~~
 
 用dpkg安装该包。
 ![file-list](/ubuntu16.04_SoftInstall/youdao-dict_dpkg.png)
+果断报了缺失依赖包的错误。
+上网查之，利用ubuntu的apt-get，自动补全依赖包
+使用
+``` bash
+apt-get -f -y install
+```
+解决依赖问题后，重新执行dpkg安装deb包，成功
 ![file-list](/ubuntu16.04_SoftInstall/youdao-dict_ok.png)
+居然用deepin的版本也能安装。deepin果然是ubuntu的兄弟
+
+参考来源： http://www.cnblogs.com/horizonli/p/5179224.html
+
+### aria2c下载 + webui-aria2下载百度云资源
+``` bash
+sudo add-apt-repository ppa:t-tujikawa/ppa
+sudo apt-get update
+sudo apt-get install aria2
+```
+aria2c 安装好了……
+
+添加对百度云的配置
+
+~~创建存放配置文件的目录~~
+``` bash
+mkdir ～/.aria2
+```
+
+下载下面目录下的所有配置文件，
+[./aria2](/ubuntu16.04_SoftInstall/.aria2)
+
+并把./aria2这个文件放在用户目录（即： ~/）
+
+配置./aria2目录下的aria2.conf,高亮的部分。
+![file-list](/ubuntu16.04_SoftInstall/aria2_conf.png)
+配置完成后，执行
+``` bash
+aria2c --conf-path=/XXX/aria2.conf
+```
+/XXX 代表aria2.conf的路径。
+
+在https://github.com/acgotaku/BaiduExporter中下载安装chrome的BaiduExporter插件。
+安装完成后，
+
+打开百度云链接，就多出一个“导出下载”的选项。
+![file-list](/ubuntu16.04_SoftInstall/aria2_download.png)
+选取ARIA2 RPC，就可以进行百度网盘资源的下载了。而且好像还是没有速度限制的哦。
+
+问题来了，我安装网上的教程，发现下载的时候登陆http://ziahamza.github.io/webui-aria2/
+时，并没有下载信息的显示。
+
+解决方法1：
+点击页面的“设置” -> “连接设置”，设置“主机”为localhost；设置“端口”为6800 。 保存连接设置。
+![file-list](/ubuntu16.04_SoftInstall/aria2_webui-aria2.png)
+页面右上角显示：
+
+正在尝试使用新的连接设置来连接到 Aria2
+
+过了一会儿，就能显示出你的下载信息了。
+
+
+解决方法2：
+去https://github.com/ziahamza/webui-aria2
+，把它clone到本地，然后打开目录下的index.html，就能显示相关下载信息了
+![file-list](/ubuntu16.04_SoftInstall/aria2_download2.png)
