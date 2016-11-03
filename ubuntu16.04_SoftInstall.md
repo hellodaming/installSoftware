@@ -107,8 +107,19 @@ modprobe vboxdrv
 ![file-list](/ubuntu16.04_SoftInstall/virtualbox_增强功能3.png)
 
 ok！
+
+
+
+
 用了差不多1天时间折腾这个，我晕
  at 2016/09/19
+
+今天帮同学的window时，安装增强工具各种失败：未能加载虚拟光驱 VBoxsGuestAdditions.iso到虚拟电脑
+后来google一下，找到解决方法了
+链接： http://zycao.com/virtualbox-ubuntu-vboxsguestadditions.html
+
+
+
 
 ### vim C++ 各种折腾还是失败了……
 ~~https://github.com/VundleVim/Vundle.vim/blob/master/README_ZH_CN.md~~
@@ -192,6 +203,35 @@ aria2c --conf-path=/XXX/aria2.conf
 ![file-list](/ubuntu16.04_SoftInstall/aria2_download2.png)
 
 参考资料：http://www.jianshu.com/p/d7e01982e474
+
 参考资料：http://www.cnblogs.com/zz0412/p/3416683.html
+
 参考资料：https://github.com/acgotaku/BaiduExporter
-参考资料：http://moflying.com/2016/06/05/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8aria2%E5%8F%8Awebui-aria2%E4%B8%8B%E8%BD%BD%E7%99%BE%E5%BA%A6%E4%BA%91%E8%B5%84%E6%BA%90/
+
+ 参考资料：
+ http://moflying.com/2016/06/05/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8aria2%E5%8F%8Awebui-aria2%E4%B8%8B%E8%BD%BD%E7%99%BE%E5%BA%A6%E4%BA%91%E8%B5%84%E6%BA%90/
+
+
+
+### latex + Atom
+安装 Tex Live
+```bash
+sudo apt-get install texlive-full
+```
+出乎意料的大，有1900+M。
+
+安装完不能用，
+需用一个编辑器，这里我还是使用先前已经安装好的Atom。
+
+打开Atom，左上角Edit -> Preferences , 打开Setting，点击install，搜索并安装下面三个packages：
+
+```bash
+语言高亮：language-latex
+编译：latex
+PDF预览：pdf-view
+```
+
+安装完成后，就能在Atom中新建文件，并在右下角选择LaTeX作为文件高亮语言
+
+参考资料： https://xuewenyuan.github.io/2016/10/20/TexLive+Atom/   
+参考资料： http://www.cnblogs.com/schaepher/p/5934184.html
