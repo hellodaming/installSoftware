@@ -235,3 +235,25 @@ PDF预览：pdf-view
 
 参考资料： https://xuewenyuan.github.io/2016/10/20/TexLive+Atom/   
 参考资料： http://www.cnblogs.com/schaepher/p/5934184.html
+
+
+### 安装 octave
+```bash
+sudo apt-add-repository ppa:octave/stable
+sudo apt-get update
+sudo apt-get install octave
+```
+安装后，点击octave，
+
+出现错误：
+The settings file /home/user/.config/octave/qt-settings does not exist and can not be created.
+Make sure you have read and write permissions to /home/user/.config/octave
+Octave GUI must be closed now.
+
+解决方法：
+```bash
+cd .config/octave
+sudo chown user qt-settings
+```
+参考资料： http://blog.topspeedsnail.com/archives/6432  
+参考资料： http://unix.stackexchange.com/questions/292721/error-running-octave-in-ubuntu-16-04
