@@ -257,3 +257,21 @@ sudo chown user qt-settings
 ```
 参考资料： http://blog.topspeedsnail.com/archives/6432  
 参考资料： http://unix.stackexchange.com/questions/292721/error-running-octave-in-ubuntu-16-04
+
+
+
+### 给一台i7-6700 GTX1070 主板技嘉B150主板的电脑安装Ubuntu16.04
+
+
+遇到的坑1 ： 屏幕线原来连接在PCIe1的接口上，在重启进入安装页面后，刚刚看到Ubuntu的配置页面的时候，显示屏黑了，然后显示屏闪过 类似 ……1920*1080*60 ……
+
+的字样（当时忘记拍照了！），
+
+解决方案：估计是因为显卡的问题，所以进主板的BIOS，把Internal Graphics(内建显示功能)，把它改成：Disabled（关闭），然后 Init Display First 由PCIe1改成IGFX，最后把显示器数据线接到电源旁边的接口，OK
+
+
+遇到的坑2 ： 选用了一个USB3.1的U盘作为启动盘，但选择分区后，确定安装，几乎立马提示的错误:
+```bash
+This particular error is often due to a faulty CD/DVD disk or drive, or a faulty hard disk. It may help to clean the CD/DVD, to burn the CD/DVD at a lower speed, to clean the CD/DVD drive lens (cleaning kits are often available from electronics suppliers), to check whether the hard disk is old and in need of replacement, or to move the system to a cooler environment.
+```
+后来换了个USB2.0的U盘作为启动盘 就好了。原因未明
